@@ -44,7 +44,7 @@ FROM saucedemo;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" object-ref="schemas/u201212290_qaloantec/tables/users" />
+      <object connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" object-ref="schemas/u201212290_qaloantec/tables/categories" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabasePrerequisiteManager">
@@ -54,6 +54,7 @@ FROM saucedemo;]]></console>
     <connection id="da17070a-bc95-4353-9c53-4d5b570d93ea" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.categories" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.saucedemo" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.subscribers" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.deposits" active-filter-id="EMPTY_FILTER" />

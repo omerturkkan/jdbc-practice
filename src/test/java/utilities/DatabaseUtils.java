@@ -35,6 +35,15 @@ public final class DatabaseUtils {
         return statement;
     }
 
+    public static int executeUpdate(String query) {
+        createStatement();
+        try {
+            return statement.executeUpdate(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static ResultSet executeQuery(String query) {
         try {
             resultSet = statement.executeQuery(query);

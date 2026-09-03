@@ -1,5 +1,6 @@
 Feature: Saucedemo table username verification
 
+  @wip
   Scenario: Verify username by id in saucedemo table
 
     Given the user connects to the database

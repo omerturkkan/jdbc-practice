@@ -1,5 +1,5 @@
 Feature: Deposits table query verification
-  @wip
+
   Scenario: Verify record count within a specific amount range
 
     Given the user connects to the database

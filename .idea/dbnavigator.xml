@@ -43,9 +43,7 @@ FROM saucedemo;]]></console>
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" object-ref="schemas/u201212290_qaloantec/tables/cron_schedules" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabasePrerequisiteManager">
     <prerequisites />
@@ -107,7 +105,7 @@ FROM saucedemo;]]></console>
           <azure-token-tenant-id value="" />
           <azure-token-client-id value="" />
           <azure-token-client-certificate-file value="" />
-          <session-user value="u201212290_qaloanuser@187.40.45.24" />
+          <session-user value="u201212290_qaloanuser@93.202.215.43" />
         </database>
         <properties>
           <auto-commit value="false" />

@@ -1,6 +1,5 @@
 Feature: Cron schedules table name verification
 
-  @wip
   Scenario: Verify first two name values in cron_schedules table
 
     Given the user connects to the database

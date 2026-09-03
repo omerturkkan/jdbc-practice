@@ -38,4 +38,8 @@ public final class LoantechQueries {
     public static String update(String table, String column, String value, String conditionColumn, String conditionValue) {
         return "UPDATE " + table + " SET " + column + "='" + value + "' WHERE " + conditionColumn + "='" + conditionValue + "'";
     }
+
+    public static String queryWhere(String column, String table, String conditionColumn, String conditionValue) {
+        return "SELECT " + column + " FROM " + table + " WHERE " + conditionColumn + "='" + conditionValue + "'";
+    }
 }

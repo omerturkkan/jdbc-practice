@@ -35,7 +35,7 @@ public class CommonStepDefinitions {
 
     @Then("the {string} in {string} table where {string} is {string} should be {string}")
     public void the_in_table_where_is_should_be(String column, String table, String conditionColumn, String conditionValue, String expectedValue) throws SQLException {
-        String selectQuery = "SELECT " + column + " FROM " + table + " WHERE " + conditionColumn + "='" + conditionValue + "'";
+        String selectQuery = LoantechQueries.queryWhere(column, table, conditionColumn, conditionValue);
         ResultSet resultSet = DatabaseUtils.executeQuery(selectQuery);
 
         resultSet.first();

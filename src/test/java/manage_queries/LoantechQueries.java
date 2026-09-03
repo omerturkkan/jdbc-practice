@@ -1,6 +1,6 @@
 package manage_queries;
 
-public class LoantechQueries {
+public final class LoantechQueries {
     private LoantechQueries() { }
 
     public static final String GET_ALL_USERNAMES =
@@ -24,8 +24,11 @@ public class LoantechQueries {
     public static final String GET_EMAIL_BY_ID_FROM_SUBSCRIBERS =
             "SELECT email FROM subscribers WHERE id = 20";
 
-    public static String deneme(String sutun, String tablo) {
+    public static String query(String column, String table) {
+        return "SELECT " + column + " FROM " + table;
+    }
 
-        return "SELECT" +
+    public static String tableQuery(String tableName) {
+        return "SELECT * FROM " + tableName;
     }
 }

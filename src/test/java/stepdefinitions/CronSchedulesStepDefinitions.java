@@ -1,35 +1,22 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
-import manage_queries.LoantechQueries;
 import org.testng.Assert;
+import utilities.DatabaseUtils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static stepdefinitions.CommonStepDefinitions.*;
-
 public class CronSchedulesStepDefinitions {
 
-    @When("the user queries names from the cron_schedules table")
-    public void the_user_queries_names_from_the_cron_schedules_table() throws SQLException {
-        String query = LoantechQueries.GET_ALL_CRON_SCHEDULE_NAMES;
+    @Then("record {int} should have name {string}")
+    public void record_should_have_name(int rowNumber, String expectedName) throws SQLException {
+        ResultSet resultSet = DatabaseUtils.getResultSet();
 
-        statement = connection.createStatement(
-                ResultSet.TYPE_SCROLL_INSENSITIVE,
-                ResultSet.CONCUR_READ_ONLY
-        );
-        resultSet = statement.executeQuery(query);
-    }
+        resultSet.absolute(rowNumber);
 
-    @Then("the first two names should be {string} and {string}")
-    public void the_first_two_names_should_be_and(String expectedFirst, String expectedSecond) throws SQLException {
-        resultSet.absolute(1);
-        String actualFirst = resultSet.getString("name");
-        Assert.assertEquals(actualFirst, expectedFirst);
+        String actualName = resultSet.getString("name");
 
-        resultSet.absolute(2);
-        String actualSecond = resultSet.getString("name");
-        Assert.assertEquals(actualSecond, expectedSecond);
+        Assert.assertEquals(actualName, expectedName);
     }
 }

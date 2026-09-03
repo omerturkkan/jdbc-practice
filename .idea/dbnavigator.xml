@@ -27,14 +27,16 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="da17070a-bc95-4353-9c53-4d5b570d93ea">
-      <console name="Connection" type="STANDARD" schema="u201212290_qaloantec" session="Main"><![CDATA[SELECT username
-FROM users
-WHERE firstname = 'Elf';]]></console>
+      <console name="Connection" type="STANDARD" schema="u201212290_qaloantec" session="Main"><![CDATA[SELECT name
+FROM cron_schedules;
+
+SELECT *
+FROM saucedemo;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -42,7 +44,7 @@ WHERE firstname = 'Elf';]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" object-ref="schemas/u201212290_qaloantec/tables/subscribers" />
+      <object connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" object-ref="schemas/u201212290_qaloantec/tables/cron_schedules" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabasePrerequisiteManager">
@@ -52,8 +54,11 @@ WHERE firstname = 'Elf';]]></console>
     <connection id="da17070a-bc95-4353-9c53-4d5b570d93ea" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.saucedemo" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.subscribers" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.deposits" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.users" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="da17070a-bc95-4353-9c53-4d5b570d93ea" dataset="u201212290_qaloantec.cron_schedules" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -102,7 +107,7 @@ WHERE firstname = 'Elf';]]></console>
           <azure-token-tenant-id value="" />
           <azure-token-client-id value="" />
           <azure-token-client-certificate-file value="" />
-          <session-user value="u201212290_qaloanuser@93.202.215.43" />
+          <session-user value="u201212290_qaloanuser@187.40.45.24" />
         </database>
         <properties>
           <auto-commit value="false" />

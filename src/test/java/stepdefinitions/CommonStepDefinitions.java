@@ -1,28 +1,25 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.*;
-import utilities.ConfigReader;
-
-import java.sql.*;
+import manage_queries.LoantechQueries;
+import utilities.DatabaseUtils;
 
 public class CommonStepDefinitions {
-    public static Connection connection;
-    public static Statement statement;
-    public static ResultSet resultSet;
 
     @Given("the user connects to the database")
-    public void the_user_connects_to_the_database() throws SQLException {
-        connection = DriverManager.getConnection(
-                ConfigReader.getProperty("url"),
-                ConfigReader.getProperty("username"),
-                ConfigReader.getProperty("password")
-        );
+    public void the_user_connects_to_the_database() {
+        DatabaseUtils.getConnection();
+    }
+
+    @When("the user queries {string} values from the {string} table")
+    public void the_user_queries_values_from_the_table(String column, String table) {
+        String query = LoantechQueries.query(column, table);
+        DatabaseUtils.createStatement();
+        DatabaseUtils.executeQuery(query);
     }
 
     @Then("the user closes the database connection")
-    public void the_user_closes_the_database_connection() throws SQLException {
-        if (resultSet != null) resultSet.close();
-        if (statement != null) statement.close();
-        if (connection != null) connection.close();
+    public void the_user_closes_the_database_connection() {
+        DatabaseUtils.closeConnection();
     }
 }

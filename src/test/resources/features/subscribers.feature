@@ -1,6 +1,5 @@
 Feature: Subscribers table email verification
 
-  @wip
   Scenario: Verify email by id in subscribers table
 
     Given the user connects to the database

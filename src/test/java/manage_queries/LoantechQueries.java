@@ -46,4 +46,7 @@ public final class LoantechQueries {
     public static String insert(String table, String columns, String values) {
         return "INSERT INTO " + table + "(" + columns + ") VALUES (" + values + ")";
     }
+
+    public static final String INSERT_SUBSCRIBER =
+            "INSERT INTO subscribers(id, email) VALUES (?, ?)";
 }

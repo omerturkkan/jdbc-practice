@@ -7,6 +7,7 @@ public final class DatabaseUtils {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+    private static PreparedStatement preparedStatement;
 
     private DatabaseUtils() { }
 
@@ -65,5 +66,14 @@ public final class DatabaseUtils {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static PreparedStatement createPreparedStatement(String query) {
+        try {
+            preparedStatement = connection.prepareStatement(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return preparedStatement;
     }
 }

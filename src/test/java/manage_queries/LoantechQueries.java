@@ -42,4 +42,8 @@ public final class LoantechQueries {
     public static String queryWhere(String column, String table, String conditionColumn, String conditionValue) {
         return "SELECT " + column + " FROM " + table + " WHERE " + conditionColumn + "='" + conditionValue + "'";
     }
+
+    public static String insert(String table, String columns, String values) {
+        return "INSERT INTO " + table + "(" + columns + ") VALUES (" + values + ")";
+    }
 }
